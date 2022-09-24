@@ -1,4 +1,13 @@
+:root {
+  --color-0: #0c1e3e;
+  --color-1: #38fbdb;
+  --color-2: #fc0ff5;
+  --color-3: #8e52f5;
+}
+
 body {
+  color: var(--color-1);
+  background-color: var(--color-0);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -7,7 +16,75 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+header {
+  position: sticky;
+  position: -webkit-sticky;
+  padding: 20px 35px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  top: 0;
+  background-size: cover;
+  background-position: 80%;
+  z-index: 9999;
+}
+
+header nav {
+  margin: 10px auto;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 80vw;
+  align-items: center;
+  list-style: none;
+}
+
+header nav ul li a {
+  color: var(--color-2);
+  padding: 10px 15px;
+  font-weight: lighter;
+  font-size: 2.5vw;
+}
+
+header nav ul li a:hover {
+  text-shadow: 0 0 7px white;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--color-1);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  height: 100px;
+  /* background: var(--color-1); */
+  color: var(--color-2)
+}
+.footer h3 {
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.footer-icons img{
+  background-size: auto;
+  height: 50px;
+  width: 50px;
+}
+
+.slide {
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+}
+
+.slide.active {
+opacity: 1;
+transition-delay:0;
+z-index:1;
 }
