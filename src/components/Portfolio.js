@@ -77,8 +77,8 @@ export default function Porfolio() {
   };
 
   return (
-    <section className="">
-      <h1 id="about">Portfolio</h1>
+    <section className="portfolio-section">
+      <h1 id="portfolio">Portfolio</h1>
       <div className="project-card">
         <div>
           <button

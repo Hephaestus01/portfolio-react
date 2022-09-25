@@ -58,6 +58,12 @@ header a {
   color: var(--color-1);
 }
 
+section {
+  display: flex;
+  justify-content: column;
+  align-items: center;
+}
+
 .footer {
   display: flex;
   justify-content: space-around;

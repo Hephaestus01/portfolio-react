@@ -40,7 +40,7 @@ export default function Contact() {
   }
 
   return (
-    <section>
+    <section className="contact-section">
       <h1>Contact me</h1>
       <form id="contact-form" onSubmit={handleSubmit}>
         <div>

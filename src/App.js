@@ -9,16 +9,18 @@ import Contact from "./components/Contact";
 function App() {
   return (
     // <Router>
-      <div>
+    <div>
       <Header />
+      <main>
         <Routes>
-            <Route path="/about" element={<About />}></Route>
-            <Route path="/portfolio" element={<Porfolio />}></Route>
-            <Route path="/contact" element={<Contact />}></Route>
-            {/* <Route path="/resume" element={<Resume />}></Route> */}
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/portfolio" element={<Porfolio />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
+          {/* <Route path="/resume" element={<Resume />}></Route> */}
         </Routes>
-        <Footer />
-      </div>
+      </main>
+      <Footer />
+    </div>
     // </Router>
   );
 }
