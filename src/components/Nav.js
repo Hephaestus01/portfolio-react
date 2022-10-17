@@ -7,16 +7,16 @@ export default function Nav() {
       <nav className="">
         <ul>
           <li>
-            <Link to="/about">about</Link>
+            <Link to="portfolio-react/about">about</Link>
           </li>
           <li>
-            <Link to="/portfolio">portfolio</Link>
+            <Link to="portfolio-react/portfolio">portfolio</Link>
           </li>
           <li>
-            <Link to="/contact">contact</Link>
+            <Link to="portfolio-react/contact">contact</Link>
           </li>
           <li>
-            <Link to="/resume">resume</Link>
+            <Link to="portfolio-react/resume">resume</Link>
           </li>
         </ul>
       </nav>

@@ -1,12 +1,13 @@
-import React from 'react'
-import Nav from './Nav'
+import React from "react";
+import Nav from "./Nav";
+import { Link } from "react-router-dom";
 
 export default function () {
   return (
     <header>
-      <h1>
-        <a href="/">matt hlavaty</a>
-      </h1>
+      <Link to="/portfolio-react/">
+        <h1>matt hlavaty</h1>
+      </Link>
       <Nav />
     </header>
   );

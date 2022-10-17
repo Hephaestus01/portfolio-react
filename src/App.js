@@ -14,12 +14,15 @@ function App() {
         <Header />
         <main>
           <Routes>
-            <Route path="/" element={<About />}></Route>
-            <Route path="/about" element={<About />}></Route>
-            <Route path="/portfolio" element={<Porfolio />}></Route>
-            <Route path="/contact" element={<Contact />}></Route>
-            <Route path="/resume" element={<Resume />}></Route>
-            {/* <Route path="/resume" element={<Resume />}></Route> */}
+            <Route path="portfolio-react/" element={<About />}></Route>
+            <Route path="portfolio-react/about" element={<About />}></Route>
+            <Route
+              path="portfolio-react/portfolio"
+              element={<Porfolio />}
+            ></Route>
+            <Route path="portfolio-react/contact" element={<Contact />}></Route>
+            <Route path="portfolio-react/resume" element={<Resume />}></Route>
+            <Route path="portfolio-react/" element={<About />}></Route>
           </Routes>
         </main>
         <Footer />
