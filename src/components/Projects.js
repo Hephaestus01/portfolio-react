@@ -2,15 +2,21 @@ import React from "react";
 
 export default function Projects({
   name,
-  type,
-  description,
+  repo,
+  deploy,
+  image,
 }) {
     
     return (
-      <div>
+      <div className="project-section">
         <h1>{name}</h1>
-        <h2>{type}</h2>
-        <p>{description}</p>
+        <a className="repo-link" href={repo}>
+          Github Repository
+        </a>
+        <a className="repo-link" href={deploy}>
+          Deployed Application URL
+        </a>
+        <img className="project-image" src={image} />
       </div>
     );
 }

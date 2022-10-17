@@ -1,43 +1,31 @@
 import React, { useState } from "react";
 import Projects from "./Projects";
+import project1 from '../assets/images/projects/project-1.png'
+import project2 from '../assets/images/projects/project-2.png'
+import project3 from '../assets/images/projects/project-3.png'
 
 export default function Porfolio() {
   const [projects] = useState([
     {
       id: 1,
-      name: "Project 1",
-      type: "Type",
-      description: "Description 1",
+      name: "Cocktaily Daily",
+      repo: "https://github.com/slorreina369/cocktail-day",
+      deploy: "https://slorreina369.github.io/cocktail-day/",
+      image: project1,
     },
     {
       id: 2,
-      name: "Project 2",
-      type: "Type",
-      description: "Description 2",
+      name: "Fitwit",
+      repo: "https://github.com/Jamsniffer/fit-wit",
+      deploy: "https://frozen-citadel-35341.herokuapp.com/",
+      image: project2,
     },
     {
       id: 3,
-      name: "Project 3",
-      type: "Type",
-      description: "Description 3",
-    },
-    {
-      id: 4,
-      name: "Project 4",
-      type: "Type",
-      description: "Description 4",
-    },
-    {
-      id: 5,
-      name: "Project 5",
-      type: "Type",
-      description: "Description 5",
-    },
-    {
-      id: 6,
-      name: "Project 6",
-      type: "Type",
-      description: "Description 6",
+      name: "Genu",
+      repo: "https://github.com/Hephaestus01/codetrip-project-3",
+      deploy: "https://codetrip-33a81.firebaseapp.com/",
+      image: project3,
     },
   ]);
 
@@ -78,52 +66,39 @@ export default function Porfolio() {
 
   return (
     <section className="portfolio-section">
-      <h1 id="portfolio">Portfolio</h1>
+      <button type="button" id="last-arrow" onClick={prevSlide}>
+        &lt;&lt;&lt;
+      </button>
       <div className="project-card">
-        <div>
-          <button
-            type="button"
-            id="last-arrow"
-            onClick={prevSlide}
-          >
-            &lt;&lt;&lt;
-          </button>
-
-          {currentProjects.map((project, projectIndex) => {
-            return (
-              <>
-                <div
-                  onTouchStart={onTouchStart}
-                  onTouchMove={onTouchMove}
-                  onTouchEnd={onTouchEnd}
-                  className={
-                    projectIndex === currentIndex ? "active slide" : "slide"
-                  }
-                  key={projectIndex}
-                >
-                  {projectIndex === currentIndex && (
-                    <Projects
-                      key={project.id}
-                      {...project}
-                      currentProjects={currentProjects}
-                      projectIndex={projectIndex}
-                      index={currentIndex}
-                    />
-                  )}
-                </div>
-              </>
-            );
-          })}
-
-          <button
-            type="button"
-            id="next-arrow"
-            onClick={nextSlide}
-          >
-            &gt;&gt;&gt;
-          </button>
-        </div>
+        {currentProjects.map((project, projectIndex) => {
+          return (
+            <>
+              <div
+                onTouchStart={onTouchStart}
+                onTouchMove={onTouchMove}
+                onTouchEnd={onTouchEnd}
+                className={
+                  projectIndex === currentIndex ? "active slide" : "slide"
+                }
+                key={projectIndex}
+              >
+                {projectIndex === currentIndex && (
+                  <Projects
+                    key={project.id}
+                    {...project}
+                    currentProjects={currentProjects}
+                    projectIndex={projectIndex}
+                    index={currentIndex}
+                  />
+                )}
+              </div>
+            </>
+          );
+        })}
       </div>
+      <button type="button" id="next-arrow" onClick={nextSlide}>
+        &gt;&gt;&gt;
+      </button>
     </section>
   );
 }

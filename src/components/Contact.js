@@ -41,9 +41,9 @@ export default function Contact() {
 
   return (
     <section className="contact-section">
-      <h1>Contact me</h1>
       <form id="contact-form" onSubmit={handleSubmit}>
         <div>
+          <h1>Contact me</h1>
           <label htmlFor="name">Name:</label>
           <input
             type="text"

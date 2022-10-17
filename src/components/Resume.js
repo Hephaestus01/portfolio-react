@@ -1,10 +1,9 @@
 import React from "react";
 
-export default function About() {
+export default function Resume() {
   return (
     <section className="about-section">
-      <div className="about-page">
-        <h1 id="about">About</h1>
+      <div className="">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
           bibendum turpis sed ex condimentum molestie. Mauris condimentum lectus
